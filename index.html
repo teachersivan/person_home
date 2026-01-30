@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI教学专家 - 个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>AI教学专家</h1>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">课程 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#courses"><i class="fas fa-robot"></i> 机器学习基础</a></li>
+                            <li><a href="#courses"><i class="fas fa-brain"></i> 深度学习进阶</a></li>
+                            <li><a href="#courses"><i class="fas fa-language"></i> 自然语言处理</a></li>
+                            <li><a href="#courses"><i class="fas fa-eye"></i> 计算机视觉</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="social-icons">
+                        <a href="#" title="微信"><i class="fab fa-weixin"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="theme-toggle" title="切换主题">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="notification-icon" title="通知">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                        <div class="notification-dropdown">
+                            <div class="notification-header">
+                                <h4>通知</h4>
+                                <span class="mark-all-read">全部已读</span>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item unread">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div class="notification-content">
+                                        <p>新课程《Transformer详解》已上线</p>
+                                        <span class="notification-time">2小时前</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item unread">
+                                    <i class="fas fa-calendar"></i>
+                                    <div class="notification-content">
+                                        <p>本周六有线上直播答疑</p>
+                                        <span class="notification-time">5小时前</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <i class="fas fa-comment"></i>
+                                    <div class="notification-content">
+                                        <p>有学生回复了您的留言</p>
+                                        <span class="notification-time">1天前</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="btn-login">登录</button>
+                        <button class="btn-register">注册</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active slide-1">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>探索AI的无限可能</h2>
+                        <p>专业AI教学，引领智能时代</p>
+                        <a href="#courses" class="btn">查看课程</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide slide-2">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>掌握AI核心技术</h2>
+                        <p>从基础到进阶，全面提升AI技能</p>
+                        <a href="#courses" class="btn">开始学习</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide slide-3">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>开启AI职业新篇章</h2>
+                        <p>实战项目，助力职业发展</p>
+                        <a href="#contact" class="btn">联系咨询</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-indicators">
+            <button class="indicator active"></button>
+            <button class="indicator"></button>
+            <button class="indicator"></button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>我是一名专业的AI教学老师，拥有多年人工智能领域的教学经验。致力于将复杂的AI概念简化，帮助学生快速掌握AI核心技术和应用。</p>
+                    <p>我的教学理念是理论与实践相结合，注重培养学生的创新思维和解决实际问题的能力。</p>
+                    <div class="skills">
+                        <span>机器学习</span>
+                        <span>深度学习</span>
+                        <span>自然语言处理</span>
+                        <span>计算机视觉</span>
+                        <span>AI伦理</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20AI%20teacher%20in%20dark%20background%20with%20tech%20elements&image_size=square" alt="AI教学专家">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>精品课程</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=machine%20learning%20course%20dark%20theme%20tech%20style&image_size=landscape_4_3" alt="机器学习基础">
+                    </div>
+                    <h3>机器学习基础</h3>
+                    <p>从零开始学习机器学习的核心概念和算法，包括监督学习、无监督学习等。</p>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=deep%20learning%20course%20dark%20theme%20neural%20networks&image_size=landscape_4_3" alt="深度学习进阶">
+                    </div>
+                    <h3>深度学习进阶</h3>
+                    <p>深入学习神经网络架构，包括CNN、RNN、Transformer等高级模型。</p>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=natural%20language%20processing%20course%20dark%20theme%20AI&image_size=landscape_4_3" alt="自然语言处理">
+                    </div>
+                    <h3>自然语言处理</h3>
+                    <p>学习NLP技术，包括文本分类、情感分析、机器翻译等应用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系我</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>如果您对课程感兴趣，或者有任何问题，欢迎随时联系我。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="姓名" required>
+                        <input type="email" placeholder="邮箱" required>
+                        <textarea placeholder="留言" required></textarea>
+                        <button type="submit" class="btn">发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI教学专家. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 创建粒子效果
+        function createParticles() {
+            const container = document.querySelector('.background-animation');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // 随机大小
+                const size = Math.random() * 10 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // 随机位置
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                
+                // 随机动画延迟和持续时间
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+
+        // 页面加载完成后创建粒子
+        window.addEventListener('load', createParticles);
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(18, 18, 18, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.backgroundColor = 'rgba(18, 18, 18, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // 英雄区域动画
+        gsap.from('.hero-content h2', {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.hero-content p', {
+            duration: 1,
+            y: 30,
+            opacity: 0,
+            delay: 0.3,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.hero-content .btn', {
+            duration: 1,
+            y: 20,
+            opacity: 0,
+            delay: 0.6,
+            ease: 'power3.out'
+        });
+
+        // 滚动触发动画
+        gsap.utils.toArray('.about, .courses, .contact').forEach(section => {
+            gsap.from(section.querySelector('h2'), {
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%'
+                },
+                duration: 0.8,
+                y: 30,
+                opacity: 0,
+                ease: 'power3.out'
+            });
+        });
+
+        // 关于我部分动画
+        gsap.from('.about-text', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top 70%'
+            },
+            duration: 0.8,
+            x: -50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.about-image', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top 70%'
+            },
+            duration: 0.8,
+            x: 50,
+            opacity: 0,
+            delay: 0.3,
+            ease: 'power3.out'
+        });
+
+        // 技能标签动画
+        gsap.from('.skills span', {
+            scrollTrigger: {
+                trigger: '.skills',
+                start: 'top 80%'
+            },
+            duration: 0.6,
+            y: 20,
+            opacity: 0,
+            stagger: 0.1,
+            ease: 'power3.out'
+        });
+
+        // 课程卡片动画
+        gsap.fromTo('.course-card', 
+            {
+                y: 50,
+                opacity: 0
+            },
+            {
+                scrollTrigger: {
+                    trigger: '.courses',
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                },
+                duration: 0.8,
+                y: 0,
+                opacity: 1,
+                stagger: 0.2,
+                ease: 'power3.out'
+            }
+        );
+
+        // 联系部分动画
+        gsap.from('.contact-info', {
+            scrollTrigger: {
+                trigger: '.contact',
+                start: 'top 70%'
+            },
+            duration: 0.8,
+            x: -50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.contact-form', {
+            scrollTrigger: {
+                trigger: '.contact',
+                start: 'top 70%'
+            },
+            duration: 0.8,
+            x: 50,
+            opacity: 0,
+            delay: 0.3,
+            ease: 'power3.out'
+        });
+
+        // 社交媒体链接动画
+        gsap.from('.social-links a', {
+            scrollTrigger: {
+                trigger: '.social-links',
+                start: 'top 80%'
+            },
+            duration: 0.6,
+            y: 20,
+            opacity: 0,
+            stagger: 0.1,
+            ease: 'power3.out'
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 轮播功能
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // 初始化轮播
+        function initSlider() {
+            startSlideInterval();
+            setupEventListeners();
+        }
+
+        // 开始自动轮播
+        function startSlideInterval() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // 停止自动轮播
+        function stopSlideInterval() {
+            clearInterval(slideInterval);
+        }
+
+        // 切换到下一张幻灯片
+        function nextSlide() {
+            goToSlide((currentSlide + 1) % slides.length);
+        }
+
+        // 切换到上一张幻灯片
+        function prevSlide() {
+            goToSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+
+        // 切换到指定幻灯片
+        function goToSlide(index) {
+            // 隐藏当前幻灯片
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+
+            // 显示目标幻灯片
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+
+            // 重置动画
+            gsap.from('.hero-content h2', {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: 'power3.out'
+            });
+
+            gsap.from('.hero-content p', {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                delay: 0.3,
+                ease: 'power3.out'
+            });
+
+            gsap.from('.hero-content .btn', {
+                duration: 1,
+                y: 20,
+                opacity: 0,
+                delay: 0.6,
+                ease: 'power3.out'
+            });
+        }
+
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 控制按钮点击事件
+            prevBtn.addEventListener('click', function() {
+                stopSlideInterval();
+                prevSlide();
+                startSlideInterval();
+            });
+
+            nextBtn.addEventListener('click', function() {
+                stopSlideInterval();
+                nextSlide();
+                startSlideInterval();
+            });
+
+            // 指示器点击事件
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    stopSlideInterval();
+                    goToSlide(index);
+                    startSlideInterval();
+                });
+            });
+
+            // 鼠标悬停时暂停轮播
+            const heroSlider = document.querySelector('.hero');
+            heroSlider.addEventListener('mouseenter', stopSlideInterval);
+            heroSlider.addEventListener('mouseleave', startSlideInterval);
+        }
+
+        // 初始化轮播
+        initSlider();
+
+        // 主题切换功能
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        let isDarkTheme = true;
+
+        themeToggle.addEventListener('click', function() {
+            isDarkTheme = !isDarkTheme;
+            if (isDarkTheme) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                document.body.style.backgroundColor = '#121212';
+                document.body.style.color = '#e0e0e0';
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                document.body.style.backgroundColor = '#f5f5f5';
+                document.body.style.color = '#333';
+            }
+        });
+
+        // 登录注册按钮点击事件
+        const btnLogin = document.querySelector('.btn-login');
+        const btnRegister = document.querySelector('.btn-register');
+
+        btnLogin.addEventListener('click', function() {
+            alert('登录功能即将上线，敬请期待！');
+        });
+
+        btnRegister.addEventListener('click', function() {
+            alert('注册功能即将上线，敬请期待！');
+        });
+
+        // 通知标记已读功能
+        const markAllRead = document.querySelector('.mark-all-read');
+        const notificationBadge = document.querySelector('.notification-badge');
+        const unreadItems = document.querySelectorAll('.notification-item.unread');
+
+        markAllRead.addEventListener('click', function(e) {
+            e.stopPropagation();
+            unreadItems.forEach(item => {
+                item.classList.remove('unread');
+            });
+            notificationBadge.style.display = 'none';
+        });
+
+        // 社交媒体链接点击提示
+        document.querySelectorAll('.social-icons a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const platform = this.getAttribute('title');
+                alert(`${platform}链接即将开放，敬请期待！`);
+            });
+        });
+
+        // 下拉菜单链接平滑滚动
+        document.querySelectorAll('.dropdown-menu a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
